@@ -1,105 +1,227 @@
+import { ArrowRight, Shield, Users, Zap, Target, Sparkles, ChevronRight } from 'lucide-react'
 import { Button } from './ui/button'
-import { ArrowRight } from 'lucide-react'
 
 export default function CoreSolutionsSection() {
   return (
-    <section id="solutions-section" className="py-20 bg-opasca-light-gray">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="solutions-section" className="relative py-16 lg:py-24 bg-gradient-to-br from-white via-slate-50 to-white overflow-hidden">
+      
+      {/* Background Elements */}
+      <div className="absolute inset-0">
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-radial from-opasca-accent/5 to-transparent rounded-full blur-3xl"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-gradient-radial from-blue-500/5 to-transparent rounded-full blur-3xl"></div>
+      </div>
+
+      <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
+        
+        {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold text-opasca-text-dark mb-6">
-            Unsere Kernlösungen
+          <div className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-primary/10 rounded-full mb-6">
+            <Target className="w-4 h-4 text-opasca-accent" />
+            <span className="text-sm font-medium text-opasca-accent uppercase tracking-wide">
+              Kern-Lösungen
+            </span>
+          </div>
+          
+          <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-opasca-text-dark mb-6">
+            Zwei{' '}
+            <span className="gradient-text bg-gradient-primary bg-clip-text text-transparent">
+              revolutionäre Lösungen
+            </span>
+            <br />
+            <span className="text-opasca-text-muted">für maximale Effizienz</span>
           </h2>
-          <p className="text-lg sm:text-xl text-opasca-text-dark/80 max-w-3xl mx-auto">
-            Maßgeschneiderte Digitalisierungslösungen für jeden Bereich Ihrer medizinischen Einrichtung.
+          
+          <p className="text-lg text-opasca-text-muted max-w-3xl mx-auto leading-relaxed">
+            Entdecken Sie unsere beiden Hauptlösungen, die speziell entwickelt wurden, 
+            um Ihre klinischen Abläufe zu optimieren und die Patientenversorgung zu verbessern.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
+        {/* Solutions Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+          
           {/* Safety Suite Card */}
-          <div className="group relative overflow-hidden rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-500 transform hover:-translate-y-2">
-            <div className="relative h-80 sm:h-96 lg:h-[500px]">
-              {/* Background Video */}
-              <video 
-                autoPlay 
-                loop 
-                muted 
-                playsInline
-                className="absolute inset-0 w-full h-full object-cover"
-              >
-                <source src="https://opasca.com/wp-content/uploads/2023/04/ETHOS_Varian_digital_animation.mp4" type="video/mp4" />
-              </video>
+          <div className="group relative">
+            <div className="absolute -inset-1 bg-gradient-to-r from-red-500/20 to-pink-500/20 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            
+            <div className="relative bg-white rounded-3xl overflow-hidden shadow-2xl border border-gray-100 group-hover:shadow-3xl transition-all duration-500">
               
-              {/* Overlay */}
-              <div className="absolute inset-0 bg-opasca-primary/70 group-hover:bg-opasca-primary/60 transition-all duration-500"></div>
-              
-              {/* Content */}
-              <div className="relative z-10 flex flex-col justify-center items-center h-full text-center p-8">
-                <div className="mb-6">
-                  <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mb-4 mx-auto">
-                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                    </svg>
-                  </div>
-                  <h3 className="font-heading text-2xl sm:text-3xl font-bold text-white mb-4">
-                    Safety Suite für Strahlentherapie
-                  </h3>
-                  <p className="text-lg text-white/90 mb-6 max-w-sm mx-auto">
-                    Unübertroffene Sicherheit und Effizienz für Ihre Strahlentherapie-Workflows.
-                  </p>
+              {/* Card Header */}
+              <div className="relative h-64 bg-gradient-to-br from-red-500 to-pink-600 overflow-hidden">
+                <div className="absolute inset-0 bg-black/20"></div>
+                
+                {/* Background Video */}
+                <video 
+                  autoPlay 
+                  loop 
+                  muted 
+                  playsInline
+                  className="absolute inset-0 w-full h-full object-cover opacity-80"
+                >
+                  <source src="https://opasca.com/wp-content/uploads/2023/04/ETHOS_Varian_digital_animation.mp4" type="video/mp4" />
+                </video>
+                
+                {/* Floating Icon */}
+                <div className="absolute top-6 left-6 w-12 h-12 bg-white/20 backdrop-blur-xl rounded-2xl flex items-center justify-center">
+                  <Shield className="w-6 h-6 text-white" />
                 </div>
                 
+                {/* Badge */}
+                <div className="absolute top-6 right-6 px-3 py-1 bg-white/20 backdrop-blur-xl rounded-full">
+                  <span className="text-xs font-medium text-white uppercase tracking-wide">
+                    Strahlentherapie
+                  </span>
+                </div>
+              </div>
+              
+              {/* Card Content */}
+              <div className="p-8">
+                <div className="flex items-start justify-between mb-6">
+                  <div>
+                    <h3 className="font-heading text-2xl font-bold text-opasca-text-dark mb-2">
+                      Safety Suite für Strahlentherapie
+                    </h3>
+                    <p className="text-opasca-text-muted">
+                      Unübertroffene Sicherheit und Effizienz für Ihre Radiotherapie-Workflows
+                    </p>
+                  </div>
+                  <div className="flex-shrink-0 w-8 h-8 bg-red-100 rounded-full flex items-center justify-center">
+                    <Zap className="w-4 h-4 text-red-600" />
+                  </div>
+                </div>
+                
+                {/* Features */}
+                <div className="space-y-3 mb-8">
+                  <div className="flex items-center space-x-3">
+                    <div className="w-2 h-2 bg-red-500 rounded-full"></div>
+                    <span className="text-sm font-medium text-opasca-text-dark">
+                      Echtzeit-Sicherheitsprüfungen
+                    </span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <div className="w-2 h-2 bg-red-500 rounded-full"></div>
+                    <span className="text-sm font-medium text-opasca-text-dark">
+                      Automatisierte Workflow-Optimierung
+                    </span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <div className="w-2 h-2 bg-red-500 rounded-full"></div>
+                    <span className="text-sm font-medium text-opasca-text-dark">
+                      Nahtlose Systemintegration
+                    </span>
+                  </div>
+                </div>
+                
+                {/* CTA */}
                 <Button 
-                  variant="secondary"
-                  className="bg-white/20 hover:bg-white/30 text-white border-white/30 hover:border-white/50 backdrop-blur-sm group-hover:bg-white group-hover:text-opasca-primary transition-all duration-300"
+                  className="w-full bg-gradient-to-r from-red-500 to-pink-600 text-white font-semibold py-3 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 group-hover:from-red-600 group-hover:to-pink-700"
                 >
-                  Jetzt entdecken
-                  <ArrowRight className="ml-2 w-4 h-4" />
+                  <span className="flex items-center justify-center space-x-2">
+                    <span>Mehr erfahren</span>
+                    <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-200" />
+                  </span>
                 </Button>
               </div>
             </div>
           </div>
 
           {/* Patient Management Card */}
-          <div className="group relative overflow-hidden rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-500 transform hover:-translate-y-2">
-            <div className="relative h-80 sm:h-96 lg:h-[500px]">
-              {/* Background Video */}
-              <video 
-                autoPlay 
-                loop 
-                muted 
-                playsInline
-                className="absolute inset-0 w-full h-full object-cover"
-              >
-                <source src="https://opasca.com/wp-content/uploads/2024/02/OPASCA_Startseite_digital_animation.mp4" type="video/mp4" />
-              </video>
+          <div className="group relative">
+            <div className="absolute -inset-1 bg-gradient-to-r from-opasca-accent/20 to-blue-500/20 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            
+            <div className="relative bg-white rounded-3xl overflow-hidden shadow-2xl border border-gray-100 group-hover:shadow-3xl transition-all duration-500">
               
-              {/* Overlay */}
-              <div className="absolute inset-0 bg-opasca-accent/70 group-hover:bg-opasca-accent/60 transition-all duration-500"></div>
-              
-              {/* Content */}
-              <div className="relative z-10 flex flex-col justify-center items-center h-full text-center p-8">
-                <div className="mb-6">
-                  <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mb-4 mx-auto">
-                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                    </svg>
-                  </div>
-                  <h3 className="font-heading text-2xl sm:text-3xl font-bold text-white mb-4">
-                    InClinic Patientenmanagement
-                  </h3>
-                  <p className="text-lg text-white/90 mb-6 max-w-sm mx-auto">
-                    Digitale Klinik: Health Journey 4.0 - Optimieren Sie die gesamte klinische Patientenreise.
-                  </p>
+              {/* Card Header */}
+              <div className="relative h-64 bg-gradient-to-br from-opasca-accent to-blue-600 overflow-hidden">
+                <div className="absolute inset-0 bg-black/20"></div>
+                
+                {/* Background Video */}
+                <video 
+                  autoPlay 
+                  loop 
+                  muted 
+                  playsInline
+                  className="absolute inset-0 w-full h-full object-cover opacity-80"
+                >
+                  <source src="https://opasca.com/wp-content/uploads/2024/02/OPASCA_Startseite_digital_animation.mp4" type="video/mp4" />
+                </video>
+                
+                {/* Floating Icon */}
+                <div className="absolute top-6 left-6 w-12 h-12 bg-white/20 backdrop-blur-xl rounded-2xl flex items-center justify-center">
+                  <Users className="w-6 h-6 text-white" />
                 </div>
                 
+                {/* Badge */}
+                <div className="absolute top-6 right-6 px-3 py-1 bg-white/20 backdrop-blur-xl rounded-full">
+                  <span className="text-xs font-medium text-white uppercase tracking-wide">
+                    Patientenmanagement
+                  </span>
+                </div>
+              </div>
+              
+              {/* Card Content */}
+              <div className="p-8">
+                <div className="flex items-start justify-between mb-6">
+                  <div>
+                    <h3 className="font-heading text-2xl font-bold text-opasca-text-dark mb-2">
+                      InClinic Patientenmanagement
+                    </h3>
+                    <p className="text-opasca-text-muted">
+                      Optimieren Sie die gesamte klinische Reise von der Ankunft bis zur Entlassung
+                    </p>
+                  </div>
+                  <div className="flex-shrink-0 w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
+                    <Sparkles className="w-4 h-4 text-blue-600" />
+                  </div>
+                </div>
+                
+                {/* Features */}
+                <div className="space-y-3 mb-8">
+                  <div className="flex items-center space-x-3">
+                    <div className="w-2 h-2 bg-opasca-accent rounded-full"></div>
+                    <span className="text-sm font-medium text-opasca-text-dark">
+                      Digitale Patientenreise
+                    </span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <div className="w-2 h-2 bg-opasca-accent rounded-full"></div>
+                    <span className="text-sm font-medium text-opasca-text-dark">
+                      Automatisierte Check-in-Prozesse
+                    </span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <div className="w-2 h-2 bg-opasca-accent rounded-full"></div>
+                    <span className="text-sm font-medium text-opasca-text-dark">
+                      Echtzeit-Kommunikation
+                    </span>
+                  </div>
+                </div>
+                
+                {/* CTA */}
                 <Button 
-                  variant="secondary"
-                  className="bg-white/20 hover:bg-white/30 text-white border-white/30 hover:border-white/50 backdrop-blur-sm group-hover:bg-white group-hover:text-opasca-accent transition-all duration-300"
+                  className="w-full bg-gradient-primary text-white font-semibold py-3 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
                 >
-                  Unsere Komplettlösung
-                  <ArrowRight className="ml-2 w-4 h-4" />
+                  <span className="flex items-center justify-center space-x-2">
+                    <span>Mehr erfahren</span>
+                    <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-200" />
+                  </span>
                 </Button>
               </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom Section */}
+        <div className="text-center mt-16">
+          <div className="inline-flex items-center space-x-4 px-8 py-4 bg-gradient-primary/10 rounded-2xl border border-opasca-accent/20">
+            <div className="flex items-center space-x-2">
+              <ChevronRight className="w-4 h-4 text-opasca-accent" />
+              <span className="text-sm font-medium text-opasca-accent">
+                Beide Lösungen kombinierbar
+              </span>
+            </div>
+            <div className="text-sm text-opasca-text-muted">
+              Für maximale Effizienz und Patientenzufriedenheit
             </div>
           </div>
         </div>
